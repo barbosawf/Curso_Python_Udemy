@@ -85,6 +85,9 @@ print(num1 < num2 or num1 > 3)
 print("num1 < num2 and num1 > 3")
 print(num1 < num2 and num1 > 3)
 
+print("num2 > num1 > 3")
+print(num2 > num1 > 3)
+
 print("type(ativo1)")
 print(type(ativo1))
 
