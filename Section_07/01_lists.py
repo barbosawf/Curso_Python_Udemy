@@ -191,21 +191,21 @@ print('\nRepetir os elementos da lista utilizando o sinal da multiplicação (*)
 print('l2:     ', l2)
 print('l2 * 3: ', l2 * 3)
 
-# Converter uma string para uma lista:
+# Converter uma ‘string’ para uma lista:
 print('\nConverter uma string para uma lista:')
 print('\nExemplo 01 - utilizando o comando .split():')
 curso = 'Programação em Python: Essencial!'
 print('curso:                 ', curso)
-curso = curso.split() # default separa por espaço
+curso = curso.split()  # default separa por espaço
 print('curso = curso.split(): ', curso)
 
 print('\nExemplo 02 - utilizando o comando .split() com definição do separador:')
 curso = 'Programação em Python: Essencial!'
 print('curso:                    ', curso)
-curso = curso.split(':') # default separa por espaço
+curso = curso.split(':')  # default separa por espaço
 print("curso = curso.split(':'): ", curso)
 
-# Tranformar uma lista numa string com o comando join():
+# Tranformar uma lista numa ‘string’ com o comando join():
 print('\nTransformar uma lista numa string com o comando join():')
 l9 = ['Programação', 'em', 'Python', 'Essencial']
 print('\nExemplo 01:')
@@ -249,7 +249,7 @@ print(soma)
 print('\nExemplo 03:')
 
 print(
-"""
+    """
 carrinho = []
 produto = ''
 
@@ -302,7 +302,7 @@ print('cores[0]:      ', cores[0])
 print('cores[2]:      ', cores[2])
 print('cores[2][2:4]: ', cores[2][2:4])
 
-# Em lista se pode fazer fazer o acesso aos elementos de forma reversa pela indexação:
+# Em lista se pode fazer o acesso aos elementos de forma reversa pela indexação:
 print('\nEm lista se pode fazer fazer o acesso aos elementos de forma reversa pela indexação:')
 cores = ['verde', 'amarelo', 'vermelho', 'azul']
 print('cores:          ', cores)
@@ -337,3 +337,40 @@ indice = 0
 while indice < len(cores):
     print(cores[indice])
     indice += 1
+
+# Gerar índice em um for:
+print('\nGerar índice em um for:')
+
+print("""
+for i, cor in enumerate(cores):
+    print(i, cor)\n""")
+for i, cor in enumerate(cores):
+    print(i, cor)
+
+print('\nlist(enumerate(cores)): ', list(enumerate(cores)))
+
+# Listas aceitam valores repetidos:
+print('\nListas aceitam valores repetidos:')
+l12 = []
+print('l12: ', l12)
+l12.append(23)
+l12.append(23)
+l12.append(55)
+l12.append(55)
+print("""
+l12.append(23)
+l12.append(23)
+l12.append(55)
+l12.append(55)\n""")
+
+print('l12: ', l12)
+
+# Métodos não tão importantes mas também úteis:
+print('\nMétodos não tão importantes mas também úteis: ')
+
+# Econtrar o índice de um elemento na lista com o comando index():
+print('\nEcontrar o índice de um elemento na lista com o comando index(): ')
+numeros = [5, 6, 7, 8, 9, 10]
+print('numeros:          ', numeros)
+print('numeros.index(6): ', numeros.index(6))
+print('numeros.index(9): ', numeros.index(9))  # erro se o elemento não estiver na lista
