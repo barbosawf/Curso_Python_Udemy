@@ -370,7 +370,14 @@ print('\nMétodos não tão importantes mas também úteis: ')
 
 # Econtrar o índice de um elemento na lista com o comando index():
 print('\nEcontrar o índice de um elemento na lista com o comando index(): ')
-numeros = [5, 6, 7, 8, 9, 10]
+numeros = [5, 6, 7, 8, 5, 9, 10]
 print('numeros:          ', numeros)
 print('numeros.index(6): ', numeros.index(6))
 print('numeros.index(9): ', numeros.index(9))  # erro se o elemento não estiver na lista
+
+# Econtrar o índice de um elemento na lista duplicado com o comando index():
+print('\nEcontrar o índice de um elemento duplicado na lista com o comando index(): ')
+print('Mostra o índicie do primeiro elemento apenas:')
+numeros = [5, 6, 7, 8, 6, 9, 10]
+print('numeros:          ', numeros)
+print('numeros.index(6): ', numeros.index(6))
