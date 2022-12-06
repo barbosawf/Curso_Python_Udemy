@@ -377,7 +377,54 @@ print('numeros.index(9): ', numeros.index(9))  # erro se o elemento não estiver
 
 # Econtrar o índice de um elemento na lista duplicado com o comando index():
 print('\nEcontrar o índice de um elemento duplicado na lista com o comando index(): ')
-print('Mostra o índicie do primeiro elemento apenas:')
+print('Mostra o índice do primeiro elemento apenas:')
 numeros = [5, 6, 7, 8, 6, 9, 10]
 print('numeros:          ', numeros)
 print('numeros.index(6): ', numeros.index(6))
+
+# Econtrar o índice de um elemento na lista com o comando index() a partir de um determinado índice:
+print('\nEcontrar o índice de um elemento na lista com o comando index() a partir de um determinado índice: ')
+print('Encontre 5 a partir do índice 1:')
+numeros = [5, 6, 7, 8, 5, 9, 10]
+print('numeros:             ', numeros)
+print('numeros.index(5, 1): ', numeros.index(5, 1))
+
+# Econtrar o índice de um elemento na lista com o comando index() dentro de uma faixa de índices:
+print('\nEcontrar o índice de um elemento na lista com o comando index() dentro de uma faixa de índices: ')
+print('Encontre 8 entre os índices 2 e 5:')
+numeros = [5, 6, 7, 8, 5, 9, 10]
+print('numeros:                ', numeros)
+print('numeros.index(8, 2, 5): ', numeros.index(8, 2, 5))
+
+# Revisão de fatiamento (slicing)
+print('\nRevisão de fatiamento (slicing):')
+
+lista = [1, 2, 3, 4, 5, 6]
+print('lista:        ', lista)
+print('lista[1]:     ', lista[1])
+print('lista[2:]:    ', lista[2:])
+print('lista[-3:]:   ', lista[-3:])
+print('lista[:2]:    ', lista[:2])
+print('lista[:-1]:   ', lista[:-1])
+print('lista[1::2]:  ', lista[1::2])
+print('lista[::2]:   ', lista[::2])
+print('lista[1::-1]: ', lista[1::-1])
+
+# Inverter valores numa lista:
+print('\nInverter valores numa lista: ')
+print('Exemplo 01')
+nomes = ['Geek', 'University']
+print('nomes: ', nomes)
+nomes[0], nomes[1] = nomes[1], nomes[0]
+print("""
+nomes[0], nomes[1] = nomes[1], nomes[0]""")
+print('nomes: ', nomes)
+
+print('\nExemplo 02')
+nomes = ['Universidade', 'Federal']
+print('nomes:           ', nomes)
+nomes.reverse()
+print('nomes.reverse(): ', nomes)
+
+# Soma, valor máximo, valor mínimo e tamanho:
+
