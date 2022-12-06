@@ -427,4 +427,59 @@ nomes.reverse()
 print('nomes.reverse(): ', nomes)
 
 # Soma, valor máximo, valor mínimo e tamanho:
+print('\nSoma, valor máximo, valor mínimo e tamanho:')
+lista = [1, 2, 3, 4, 5, 6, 10]
+print('lista:      ', lista)
+print('sum(lista): ', sum(lista))
+print('max(lista): ', max(lista))
+print('min(lista): ', min(lista))
+print('len(lista): ', len(lista))
 
+# Conversão de lista em tupla
+print('\n# Conversão de lista em tupla:')
+print('type(lista): ', type(lista))
+tupla = tuple(lista)
+print("""
+tupla = tuple(lista)\n""")
+print('type(tupla): ', type(tupla))
+
+# Desempacotar listas:
+print('\nDesempacotar listas:')
+
+print("""
+lista = [1, 2, 3]
+num1, num2, num3 = lista
+print(num1, num2, num3)\n""")
+lista = [1, 2, 3]
+num1, num2, num3 = lista  # número de variáveis deve ser o mesmo número de elementos contidos na lista
+print(num1, num2, num3)
+
+# Copiar uma lista para outra:
+print('\nCopiar uma lista para outra: ')
+print('Forma 01 (Deep copy ou cópia produnda) - uso da função .copy():')
+
+print("""
+lista = [1, 2, 3]
+nova = lista.copy()
+nova.append(4)
+print(lista)
+print(nova)\n""")
+lista = [1, 2, 3]
+nova = lista.copy()
+nova.append(4)
+print(lista)
+print(nova)
+
+print('\nForma 02 (Shallow copy ou cópia rasa) - uso do sinal =:')
+
+print("""
+lista = [1, 2, 3]
+nova = lista
+nova.append(4)
+print(lista)
+print(nova)\n""")
+lista = [1, 2, 3]
+nova = lista
+nova.append(4)
+print(lista)
+print(nova)
