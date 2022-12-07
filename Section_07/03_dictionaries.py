@@ -11,6 +11,7 @@ Sobre dicionários:
     - Tanto a chave quanto o valor pordem ser de qualquer tipo de dado;
     - Podemos misturar tipos de dados;
 
+
 """
 # Criação de dicionários
 print('Criação de dicionários')
@@ -35,3 +36,19 @@ print('\nForma 01')
 print("paises = dict(br='Brasil', eua='Estados Unidos', py='Paraguai')")
 paises = dict(br='Brasil', eua='Estados Unidos', py='Paraguai')
 print('paises: ', paises)
+
+# Acesso de elementos nos dicionários:
+print('\nAcesso de elementos nos dicionários: através das chaves.')
+print("paises['br']: ", paises['br'])
+print("paises['py']: ", paises['py'])
+
+# Se colocar uma chave que não existe dá erro:
+print('\nSe colocar uma chave que não existe dá erro:')
+print("paises['ru'])")
+
+# Mas se acessar através do comando get(), não dá erro:
+print('\nMas se acessar através do comando get(), não dá erro:')
+print("paises.get('br'): ", paises.get('br'))
+print("paises.get('ru'): ", paises.get('ru'))
+
+
