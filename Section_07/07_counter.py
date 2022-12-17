@@ -1,6 +1,8 @@
 """
 Modulo Collections — Counter
 
+https://docs.python.org/3/library/collections.html#collections.Counter
+
 Collections -> High-performance container datetypes
 
 Listas, tuplas, dicionários são conhecidos como containers (porque contém dados).
