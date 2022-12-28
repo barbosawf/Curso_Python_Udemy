@@ -97,6 +97,35 @@ print('\nExemplo 02: ')
 
 amigos = ['maria', 'julia', 'pedro', 'guilherme', 'vanessa']
 
+
+def caixa_alta(nome):
+    nome = nome.replace(nome[0], nome[0].upper())
+    return nome
+
+
 print('amigos: ', amigos)
-print('[amigo[0].upper() for amigo in amigos]: ', [amigo[0].upper() for amigo in amigos])
-print('[amigo.title() for amigo in amigos]: ', [amigo.title() for amigo in amigos])
+print("""
+def caixa_alta(nome):
+    nome = nome.replace(nome[0], nome[0].upper())
+    return nome
+    """)
+
+print('[amigo[0].upper() for amigo in amigos]:  ', [amigo[0].upper() for amigo in amigos])
+print('[amigo.title() for amigo in amigos]:     ', [amigo.title() for amigo in amigos])
+print('[caixa_alta(amigo) for amigo in amigos]: ', [caixa_alta(amigo) for amigo in amigos])
+
+
+# Exemplo 03
+print('\nExemplo 03: ')
+
+print('[num * 3 for num in range(1, 10)]: ', [num * 3 for num in range(1, 10)])
+
+# Exemplo 04
+print('\nExemplo 04: ')
+
+print('[bool(valor) for valor in [0, [], '', True, 1, 3.14]]: ', [bool(valor) for valor in [0, [], '', True, 1, 3.14]])
+
+# Exemplo 05
+print('\nExemplo 05: ')
+
+print('[str(num) for num in [1, 2, 3, 4, 5]]: ', [str(num) for num in [1, 2, 3, 4, 5]])
