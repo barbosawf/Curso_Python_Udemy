@@ -3,7 +3,6 @@ List Comprehention
 
 Pode-se adicionar estruturas condicionais lógicas numa List Comprehension
 """
-from typing import List
 
 # Exemplo 01
 print('Exemplo 01')
