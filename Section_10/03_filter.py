@@ -107,11 +107,20 @@ def filter_name(dicionario):
 
 print('filter_name(inativos): ', filter_name(inativos))
 
-# Exemplo 05. Criar uma lista contendo 'Sua instrutura é' + nome, desde que cada nome tenha menos de 5 caracteres.
-print("\nExemplo 05. Criar uma lista contendo 'Sua instrutura é' + nome, \n"
+# Exemplo 05. Filtrar os usuários que estão inativos no Tweeter (Combinação de filter e map)
+print('\nExemplo 05. Filtrar os usuários que estão inativos no Tweeter (Combinação de filter e map)')
+nomes = list(map(lambda x: x['username'], filter(lambda u: not u['tweets'], inativos)))
+print("nomes = list(map(lambda x: x['username'], filter(lambda u: not u['tweets'], inativos)))")
+print('nomes: ', nomes)
+
+# Exemplo 06. Criar uma lista contendo 'Sua instrutura é' + nome, desde que cada nome tenha menos de 5 caracteres.
+print("\nExemplo 06. Criar uma lista contendo 'Sua instrutura é' + nome,"
       "desde que cada nome tenha menos de 5 caracteres.")
 
 nomes = ['Vanessa', 'Ana', 'Maria', 'Lorena', 'Rute', 'Ivana', 'Isabela', 'Laís']
 
-lista = list(map(lambda nome: f'Sua instrutora é {nome}.'), filter(lambda nome: len(nome) < 5, nomes)))
+lista = list(map(lambda nome: f'Sua instrutora é {nome}.', filter(lambda nome: len(nome) < 5, nomes)))
+print('\nnomes: ', nomes)
+print("lista = list(map(lambda nome: f'Sua instrutora é {nome}.', filter(lambda nome: len(nome) < 5, nomes)))")
 
+print('lista: ', lista)
