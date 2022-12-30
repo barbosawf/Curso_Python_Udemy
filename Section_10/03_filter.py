@@ -5,7 +5,6 @@ filter(): serve para filtrar dados de uma certa coleção.
 """
 
 import statistics
-import time
 
 # Exemplo 01. Dados coletados de algum sensor.
 print('Exemplo 01. Dados coletados de algum sensor.')
