@@ -5,7 +5,7 @@ ATENÇÃO: É importante prestar atenção e aprender a ler as saídas de erros 
 
 Erros mais comuns são:
 
-1 - SyntaxError → Ocorre quando o Python encontra um erro de sintaxe. Algo que o Python não reconhece como parte da
+1 — SyntaxError → Ocorre quando o Python encontra um erro de sintaxe. Algo que o Python não reconhece como parte da
 linguagem.
 
 a) Definir a função de forma errada.
@@ -84,6 +84,3 @@ c = i + 1
 
 OBS.: Exceptions e Erros são sinônimos na programação.
 """
-
-
-
