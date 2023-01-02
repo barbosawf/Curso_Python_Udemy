@@ -117,5 +117,3 @@ print('cartas: ', cartas)
 shuffle(cartas)
 print('shuffle(cartas): ')
 print('cartas: ', cartas)
-
-
