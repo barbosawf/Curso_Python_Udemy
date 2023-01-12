@@ -1,0 +1,3 @@
+Um texto qualquer!
+Mais uma linha adicionada.
+Esta é a última linha, finalmente.
