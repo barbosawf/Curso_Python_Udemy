@@ -1,10 +1,10 @@
 ﻿"""
 Escrevendo em arquivos
 
-OBS: Ao abrir um arquivo para leitura não podemos realizar a escrita. Apenas ler.
+OBS. Ao abrir um arquivo para leitura não podemos realizar a escrita. Apenas ler.
 Da mesma forma, se abrirmos um arquivo para escrita, não podemos lê-lo, somente escrever nele.
 
-O argumento da função write() precisa ser string.
+O argumento da função write() precisa ser ‘string’.
 
 Se o arquivo não existir será criado, mas sele já existir, o anterior será apagado e um novo será criado.
 Dessa forma, o inteiro conteúdo no arquivo anterior é perdido.
@@ -95,4 +95,3 @@ with open('frutas.txt', 'w', encoding='utf-8') as arquivo5:
             arquivo5.write(fruta + '\n')
         else:
             break
-
