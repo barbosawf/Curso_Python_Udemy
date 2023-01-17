@@ -102,3 +102,4 @@ try:
     os.makedirs('Directory_Example/D_1/D_2/D_3', exist_ok=True)  # exist_ok é para não dar erro. Não precisa do try.
 except FileExistsError as er:
     print(f'Os diretórios já existem: \n{er}')
+
