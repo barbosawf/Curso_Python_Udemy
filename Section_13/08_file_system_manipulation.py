@@ -209,8 +209,13 @@ with tempfile.TemporaryDirectory() as tmp:
 
 
 
+# Criando um arquivo temporário
+print(f'\n{a}Criando um arquivo temporário{c}')
 
-# Criando um diretório
-print(f'\n{a}Criando um diretório{c}')
+with tempfile.TemporaryFile() as tmp:
+    tmp.write(b'O b antes das aspas eh porque a escrita tem que ser binahria.\n')
+    tmp.seek(0)
+    print(tmp.read())
+
 
 
