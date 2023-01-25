@@ -1,6 +1,7 @@
 ﻿"""
 OBS : Em arquivos temporários só conseguimos escrever bits, por isso, utilizamos b seguido de uma string.
 """
+import tempfile
 import time
 
 a = '\033[0;33m'
@@ -184,8 +185,28 @@ except OSError:
     print('Arquivo não encontrado.')
 
 
-# Criando um diretório
-print(f'\n{a}Criando um diretório{c}')
+# Criando um diretório e arquivo temporário
+print(f'\n{a}Criando um diretório e arquivo temporário{c}')
+
+print(f"""{b}
+with tempfile.TemporaryDirectory() as tmp:
+    print(f'Criei um diretório temporário: [tmp]')
+    with open(os.path.join(tmp, 'aquivo_temporario.txt'), 'w+') as arquivo: # o + é para ler o arquivo.
+        arquivo.write('Alguma coisa escrevi aqui.\\n')
+        arquivo.seek(0)
+        print(arquivo.read())
+    input() # input serve para segurar por um tempo, depois aperta Enter e o diretório com arquivo serão apagados.
+{c}""")
+
+
+with tempfile.TemporaryDirectory() as tmp:
+    print(f'Criei um diretório temporário: {tmp}')
+    with open(os.path.join(tmp, 'aquivo_temporario.txt'), 'w+') as arquivo: # o + é para ler o arquivo.
+        arquivo.write('Alguma coisa escrevi aqui.\n')
+        arquivo.seek(0)
+        print(arquivo.read())
+    input() # input serve para segurar por um tempo, depois aperta Enter e o diretório com arquivo serão apagados.
+
 
 
 
