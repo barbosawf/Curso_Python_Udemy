@@ -169,7 +169,19 @@ except FileNotFoundError:
 # Enviar arquivos para lixeira
 print(f'\n{a}Enviar arquivos para lixeira{c}')
 
+from send2trash import send2trash as s2t
 
+print(f"""{b}
+try:
+    s2t('arquivo_teste5.txt')
+except OSError:
+    print('Arquivo não encontrado.'){c}
+""")
+
+try:
+    s2t('arquivo_teste5.txt')
+except OSError:
+    print('Arquivo não encontrado.')
 
 
 # Criando um diretório
