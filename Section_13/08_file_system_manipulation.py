@@ -106,17 +106,17 @@ except FileExistsError as er:
 # Renomear um diretório
 print(f'\n{a}Renomear um diretório{c}')
 
-try:
-    os.rename('Directory_Examples/D_1/D_2/D_3', 'Directory_Examples/D_1/D_2/D_3_renamed')  # exist_ok é para não dar erro. Não precisa do try.
-except FileExistsError:
-    print('O diretório não existe!')
-
 print(f"""{b}
 try:
     os.rename('Directory_Examples/D_1/D_2/D_3', 'Directory_Examples/D_1/D_2/D_3_renamed')  # exist_ok é para não dar erro. Não precisa do try.
 except FileExistsError:
     print('O diretório não existe!'){c}
 """)
+
+try:
+    os.rename('Directory_Examples/D_1/D_2/D_3', 'Directory_Examples/D_1/D_2/D_3_renamed')  # exist_ok é para não dar erro. Não precisa do try.
+except FileExistsError:
+    print('O diretório não existe!')
 
 # Remover um arquivo
 print(f'\n{a}Remover um arquivo{c}')
@@ -133,17 +133,51 @@ try:
 except FileNotFoundError:
     print('Arquivo não encontrado.')
 
+# Remover um diretório
+print(f'\n{a}Remover um diretório{c}')
+
+
+print(f"""{b}
+try:
+    os.rmdir('Directory_Examples/Directory_Example_03')
+except OSError:
+    print('O diretório não está vazio'){c}
+""")
+
+try:
+    os.rmdir('Directory_Examples/Directory_Example_03')
+except OSError:
+    print('O diretório não está vazio')
+
+# Remover diretórios
+print(f'\n{a}Criando um diretório{c}')
+
+
+print(f"""{b}
+try:
+    os.removedirs('Directory_Examples/Directory_Example_01/D_1/D_2/D_3')
+except FileNotFoundError:
+    print('O sistema não encontrou o caminho espeficicado'){c}
+""")
+
+try:
+    os.removedirs('Directory_Examples/Directory_Example_01/D_1/D_2/D_3')
+except FileNotFoundError:
+    print('O sistema não encontrou o caminho espeficicado')
+
+
+# Enviar arquivos para lixeira
+print(f'\n{a}Enviar arquivos para lixeira{c}')
+
+
+
+
 # Criando um diretório
 print(f'\n{a}Criando um diretório{c}')
 
 
-# Criando um diretório
-print(f'\n{a}Criando um diretório{c}')
-
 
 # Criando um diretório
 print(f'\n{a}Criando um diretório{c}')
-
-
 
 
