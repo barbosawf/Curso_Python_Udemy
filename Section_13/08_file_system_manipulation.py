@@ -1,6 +1,7 @@
 ﻿"""
-
+OBS : Em arquivos temporários só conseguimos escrever bits, por isso, utilizamos b seguido de uma string.
 """
+import time
 
 a = '\033[0;33m'
 b = '\033[0;36m'
@@ -64,19 +65,19 @@ print(f'\n{a}Criando um diretório{c}')
 
 print(f"""{b}
 try:
-    os.mkdir('Directory_Example/Directory_Example_03')
+    os.mkdir('Directory_Examples/Directory_Example_03')
 except FileExistsError:
     print('O diretório já existe'){c}
     """)
 
 try:
-    os.mkdir('Directory_Example/Directory_Example_03')
+    os.mkdir('Directory_Examples/Directory_Example_03')
 except FileExistsError as er:
     print(f'O diretório já existe: \n{er}')
 
 print(f"""{b}
 try:
-    os.mkdir('Directory_Example/D_1/D_2/D_3')
+    os.mkdir('Directory_Examples/D_1/D_2/D_3')
 except (FileNotFoundError, FileExistsError) as err:
     print('Na criação de diretórios, eles devem ser criados um a um:\\n'
           'Se o diretório anterior ao diretório que se quer criar não existir, o erro FileNotFoundError acontecerá.'
@@ -84,22 +85,65 @@ except (FileNotFoundError, FileExistsError) as err:
           {c}""")
 
 try:
-    os.mkdir('Directory_Example/D_1/D_2/D_3')
+    os.mkdir('Directory_Examples/D_1/D_2/D_3')
 except (FileNotFoundError, FileExistsError) as err:
     print(f'Na criação de diretórios, eles devem ser criados um a um:\n'
           f'Se o diretório anterior ao diretório que se quer criar não existir, o erro FileNotFoundError acontecerá.'
           f'\n{err}')
 
-
 print(f"""{b}
 try:
-    os.makedirs('Directory_Example/D_1/D_2/D_3', exist_ok=True)  # exist_ok é para não dar erro. Não precisa do try.
+    os.makedirs('Directory_Examples/D_1/D_2/D_3', exist_ok=True)  # exist_ok é para não dar erro. Não precisa do try.
 except FileExistsError:
     print('O diretório já existe'){c}
     """)
 
 try:
-    os.makedirs('Directory_Example/D_1/D_2/D_3', exist_ok=True)  # exist_ok é para não dar erro. Não precisa do try.
+    os.makedirs('Directory_Examples/D_1/D_2/D_3', exist_ok=True)  # exist_ok é para não dar erro. Não precisa do try.
 except FileExistsError as er:
     print(f'Os diretórios já existem: \n{er}')
+
+# Renomear um diretório
+print(f'\n{a}Renomear um diretório{c}')
+
+try:
+    os.rename('Directory_Examples/D_1/D_2/D_3', 'Directory_Examples/D_1/D_2/D_3_renamed')  # exist_ok é para não dar erro. Não precisa do try.
+except FileExistsError:
+    print('O diretório não existe!')
+
+print(f"""{b}
+try:
+    os.rename('Directory_Examples/D_1/D_2/D_3', 'Directory_Examples/D_1/D_2/D_3_renamed')  # exist_ok é para não dar erro. Não precisa do try.
+except FileExistsError:
+    print('O diretório não existe!'){c}
+""")
+
+# Remover um arquivo
+print(f'\n{a}Remover um arquivo{c}')
+
+print(f"""{b}
+try:
+    os.remove('arquivo_teste4.txt')
+except FileNotFoundError:
+    print('Arquivo não encontrado.')
+{c}""")
+
+try:
+    os.remove('arquivo_teste4.txt')
+except FileNotFoundError:
+    print('Arquivo não encontrado.')
+
+# Criando um diretório
+print(f'\n{a}Criando um diretório{c}')
+
+
+# Criando um diretório
+print(f'\n{a}Criando um diretório{c}')
+
+
+# Criando um diretório
+print(f'\n{a}Criando um diretório{c}')
+
+
+
 
