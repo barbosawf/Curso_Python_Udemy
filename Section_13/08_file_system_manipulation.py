@@ -209,13 +209,54 @@ with tempfile.TemporaryDirectory() as tmp:
 
 
 
-# Criando um arquivo temporário
-print(f'\n{a}Criando um arquivo temporário{c}')
+# Criando um arquivo temporário (Exemplo 01)
+print(f'\n{a}Criando um arquivo temporário (Exemplo 01){c}')
+
+
+print(f"""{b}
+with tempfile.TemporaryFile() as tmp:
+    tmp.write(b'O b antes das aspas eh porque a escrita tem que ser binahria.\n')
+    tmp.seek(0)
+    print(tmp.read()){c}
+""")
 
 with tempfile.TemporaryFile() as tmp:
     tmp.write(b'O b antes das aspas eh porque a escrita tem que ser binahria.\n')
     tmp.seek(0)
     print(tmp.read())
 
+# Criando um arquivo temporário (Exemplo 02)
+print(f'\n{a}Criando um arquivo temporário (Exemplo 02){c}')
 
+print(f"""{b}
+arquivo = tempfile.TemporaryFile()
+arquivo.write(b'Geek University')
+arquivo.seek(0)
+print(arquivo.read())
+arquivo.close(){c}
+""")
 
+arquivo = tempfile.TemporaryFile()
+arquivo.write(b'Geek University')
+arquivo.seek(0)
+print(arquivo.read())
+arquivo.close()
+
+# Criando um arquivo temporário (Exemplo 03)
+print(f'\n{a}Criando um arquivo temporário (Exemplo 03){c}')
+
+print(f"""{b}
+arquivo = tempfile.NamedTemporaryFile()
+arquivo.write(b'Geek University\n')
+print(arquivo.name)
+print(arquivo.read())
+input()
+arquivo.close(){c}
+""")
+
+arquivo = tempfile.NamedTemporaryFile()
+arquivo.write(b'Geek University\n')
+print(arquivo.name)
+print(arquivo.read())
+input()
+arquivo.close()
