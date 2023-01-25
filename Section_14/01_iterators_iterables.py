@@ -6,6 +6,10 @@ Iterator:
     - um objeto que retorna um dado, sendo um elemento por vez quando uma função next() é chamada;
 Iterable:
     - um objeto que irá retornar um iterator quando a função iter() for chamada.
+
+
+Portanto, quando se faz um looping usando for, por exemplo, o python aplica a função iter() no objeto
+o tornando um iterator. E assim, a iteração pode ser feita.
 """
 
 a = '\033[0;33m'
@@ -63,3 +67,10 @@ print(next(it1))
 print(next(it1))
 print(next(it1))
 print(next(it1))
+
+print()
+
+print(next(it2))
+print(next(it2))
+print(next(it2))
+print(next(it2))
