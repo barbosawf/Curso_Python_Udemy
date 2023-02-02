@@ -21,7 +21,7 @@ def forca_tipo(*tipos):
     def decorador(funcao):
         def convert(*args, **kwargs):
             novo_args = []
-            for valor, tipo in zip(args, tipos):
+            for (valor, tipo) in zip(args, tipos):
                 novo_args.append(tipo(valor))
             return funcao(*novo_args, **kwargs)
         return convert
@@ -40,8 +40,12 @@ def dividir(a, b):
 
 
 repete_msg(1232, '3')
+print()
 repete_msg('Geek', '3')
-
+print()
+repete_msg(vezes='5', msg='Geek')
+print()
 dividir('1', 5)
+print()
 dividir('5', '2')
 

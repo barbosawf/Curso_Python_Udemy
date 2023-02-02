@@ -16,7 +16,9 @@ print("\n"
       "def quadrado_de_7():\n"
       "    print(7 * 7)\n")
 
+
 ret = quadrado_de_7()
+
 print('\nret = quadrado_de_7()')
 print('quadrado_de_7():', quadrado_de_7())
 print('ret: ', ret)
